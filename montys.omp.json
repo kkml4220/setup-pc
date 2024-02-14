@@ -62,7 +62,9 @@
         },
         {
           "background": "#2e9599",
-          "background_templates": ["{{ if gt .Code 0 }}red{{ end }}"],
+          "background_templates": [
+            "{{ if gt .Code 0 }}red{{ end }}"
+          ],
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
           "properties": {
@@ -75,6 +77,22 @@
         }
       ],
       "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "newline": false,
+      "type": "prompt",
+      "segments": [
+        {
+          "background": "#747070",
+          "foreground": "#faa029",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "\ue7ad profile:{{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "trailing_diamond": "\ue0b4 ",
+          "type": "aws"
+        }
+      ]
     },
     {
       "alignment": "left",
